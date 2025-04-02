@@ -150,3 +150,10 @@ C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\obj\Debu
 C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\obj\Debug\net8.0\TP_CreationDB.pdb
 C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\obj\Debug\net8.0\TP_CreationDB.genruntimeconfig.cache
 C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\obj\Debug\net8.0\ref\TP_CreationDB.dll
+C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\obj\Debug\net8.0\TP_CreationDB.sourcelink.json
+C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\shaddouche\Documents\FormationSQLI\TP_CreationDB\TP_CreationDB\bin\Debug\net8.0\Microsoft.Extensions.FileSystemGlobbing.dll

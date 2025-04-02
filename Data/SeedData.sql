@@ -1,6 +1,33 @@
 -- SeedData.sql
 USE TP_CreationDB;
 GO
+----Creation de  Vue SQL : V_Teacher_Subject
+CREATE VIEW V_Teacher_Subject AS
+SELECT 
+    p.Id AS TeacherId, 
+  p.FirstName AS TeacherFirstName, 
+  p.LastName AS TeacherLastName, 
+   s.Name AS SubjectName
+FROM Persons p
+INNER JOIN Subjects s ON p.SubjectId = s.ID
+WHERE p.PersonType = 'Teacher';
+
+--Création de la Procédure Stockée GetStudentByStudentNumber
+GO
+
+CREATE PROCEDURE GetStudentByStudentNumber
+  @StudentNumber INT
+AS
+BEGIN
+  SET NOCOUNT ON;
+
+   SELECT * 
+    FROM Persons
+   WHERE PersonType = 'Student' 
+      AND StudentNumber = @StudentNumber;
+END;
+
+
 
 -- Insertion dans la table Subjects
 INSERT INTO Subjects (Name, Description)

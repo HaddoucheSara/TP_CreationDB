@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TP_CreationDB.Models;
+using TP_CreationDB.Vues;
 
 namespace TP_CreationDB.Data
 {
@@ -20,6 +22,8 @@ namespace TP_CreationDB.Data
         public DbSet<Class> Classes { get; set; }
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
+        public DbSet<TeacherSubjectView> TeacherSubjects { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,6 +33,11 @@ namespace TP_CreationDB.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<TeacherSubjectView>(entity =>
+            {
+                entity.HasNoKey();
+                entity.ToView("V_Teacher_Subject");
+            });
             modelBuilder.Entity<Person>().HasDiscriminator<string>("PersonType")
                  .HasValue<Student>("Student")
                  .HasValue<Teacher>("Teacher");
@@ -53,6 +62,16 @@ namespace TP_CreationDB.Data
                 .WithMany(c => c.Enrollments)
                 .HasForeignKey(e => e.ClassId);
         }
+        public List<Student> GetStudentByStudentNumber(int studentNumber)
+        {
+            return this.Persons
+        .FromSqlRaw("EXEC GetStudentByStudentNumber @StudentNumber={0}", studentNumber)
+        .AsEnumerable()  
+        .OfType<Student>()  
+        .ToList();
+        }
+
+
 
     }
 }

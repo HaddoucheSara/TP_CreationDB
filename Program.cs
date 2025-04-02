@@ -101,6 +101,21 @@ namespace TP_CreationDB
                             enrollment.ID, enrollment.StudentName, enrollment.ClassName, enrollment.EnrollmentDate.ToShortDateString());
                     }
                     Console.WriteLine(new string('-', 70));
+                    //En utilisant la vue
+                    var teacherSubjects = dbContext.TeacherSubjects.ToList();
+
+                    foreach (var item in teacherSubjects)
+                    {
+                        Console.WriteLine($"Enseignant : {item.TeacherFirstName} {item.TeacherLastName}, Matière : {item.SubjectName}");
+                    }
+                    // En utilisant la procédure stockée
+                    var studentsP = dbContext.GetStudentByStudentNumber(1002);
+                    foreach (var student in studentsP)
+                    {
+                        Console.WriteLine($"Étudiant : {student.FirstName} {student.LastName}, Numéro : {student.StudentNumber}");
+                    }
+
+
                 }
                 catch (Exception ex)
                 {

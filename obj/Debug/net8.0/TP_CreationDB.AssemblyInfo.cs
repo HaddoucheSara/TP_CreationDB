@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP_CreationDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b5fb1238001080f463c4e0659b4173578c1c090")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0973ca8459c2f65f78a71d8f95146d3c335603d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP_CreationDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP_CreationDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
